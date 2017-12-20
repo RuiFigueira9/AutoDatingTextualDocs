@@ -81,7 +81,8 @@ def get_sent_att(model, batch):
     get_sent_att = theano.function([model.layers[0].input], model.layers[4].att)
     sent_att = get_sent_att(batch)
     return sent_att
- 
+
+##########   DATASET SECTION  #########################
 
 # Set parameters:
 max_features = 40000
@@ -288,7 +289,7 @@ for line in lines:
 
 f.close()
 
-
+######## END OF DATASET SECTION ##############
 
 n_texts=0
 n_sents=0
